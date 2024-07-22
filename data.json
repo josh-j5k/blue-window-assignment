@@ -1,0 +1,41 @@
+[
+    {
+        "casino": "grosvenor casino",
+        "logo": "src/assets/Logo_Grosvenor.png",
+        "bet": 10,
+        "get": 400,
+        "color": "#03252b",
+        "reviews": {
+            "mobile": 5,
+            "mobile_min": 5,
+            "desktop": 5,
+            "tablet": 5
+        }
+    },
+    {
+        "casino": "happy spins",
+        "logo": "src/assets/Logo_Happy Spins.png",
+        "bet": 10,
+        "get": 400,
+        "color": "#43082F",
+        "reviews": {
+            "mobile": 4,
+            "mobile_min": 5,
+            "desktop": 5,
+            "tablet": 4
+        }
+    },
+    {
+        "casino": "hajper",
+        "logo": "src/assets/Logo_Hajper.png",
+        "bet": 10,
+        "get": 400,
+        "color": "#123156",
+        "reviews": {
+            "mobile": 3,
+            "mobile_min": 5,
+            "desktop": 5,
+            "tablet": 3
+        }
+    }
+]

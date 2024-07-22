@@ -1,0 +1,14 @@
+:root {
+	--primary-font: "Montserrat", sans-serif;
+	--cta: #009129;
+	--cta-hover: #056a21;
+}
+
+body {
+	font-family: var(--primary-font);
+	color: #03252b;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
