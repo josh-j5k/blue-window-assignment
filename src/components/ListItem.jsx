@@ -5,21 +5,28 @@ import StarEmpty from "./StarEmpty"
 
 export default function ListItem({ item }) {
 	return (
-		<div className="w-clamp shadow-round mx-auto p-4">
+		<div role="listitem" className="w-clamp shadow-round mx-auto p-4">
 			<div className="grid desktop-min:grid-cols-4 -lg:grid-cols-2 -md:grid-cols-1 desktop-min:gap-8  gap-4">
 				{/* image container */}
 				<div
 					className="-lg:row-start-1 -lg:row-end-3 -md:row-start-1 -md:row-end-2 -lg:col-start-1 -lg:col-end-2 flex justify-center"
 					style={{ backgroundColor: item.color }}
 				>
-					<img src={item.logo} alt="logo" />
+					<img src={item.logo} alt={item.casino + " logo"} />
 				</div>
 				{/* stars and casino name container */}
 				<div className="flex -lg:row-start-1 -lg:row-end-2 -lg:col-start-2 -lg:col-end-3 -md:col-start-1 -md:col-end-2 -md:row-start-2 -md:row-end-3 flex-col gap-2 desktop-min:justify-center desktop-min:items-center -md:justify-center -md:items-center">
 					<span className="capitalize underline pl-2">{item.casino}</span>
 					{/* stars filled */}
-					<span className="desktop-min:flex hidden">
-						<span className="flex">
+					<span
+						title="rating"
+						aria-describedby={item.reviews.desktop + " star rating"}
+						className="desktop-min:flex hidden"
+					>
+						<span
+							aria-describedby={item.reviews.desktop + " star rating"}
+							className="flex"
+						>
 							{Array.from(Array(item.reviews.desktop)).map((_, index) => (
 								<span key={index}>
 									<StarFilled width="31" height="31" />
@@ -34,7 +41,10 @@ export default function ListItem({ item }) {
 							))}
 						</span>
 					</span>
-					<span className="-lg:flex -md:hidden hidden">
+					<span
+						aria-describedby={item.reviews.tablet + " star rating"}
+						className="-lg:flex -md:hidden hidden"
+					>
 						<span className="flex">
 							{Array.from(Array(item.reviews.tablet)).map((_, index) => (
 								<span key={index}>
@@ -50,7 +60,10 @@ export default function ListItem({ item }) {
 							))}
 						</span>
 					</span>
-					<span className="-md:flex -sm:hidden hidden">
+					<span
+						aria-describedby={item.reviews.mobile + " star rating"}
+						className="-md:flex -sm:hidden hidden"
+					>
 						<span className="flex">
 							{Array.from(Array(item.reviews.mobile)).map((_, index) => (
 								<span key={index}>
@@ -66,7 +79,10 @@ export default function ListItem({ item }) {
 							))}
 						</span>
 					</span>
-					<span className="-sm:flex hidden">
+					<span
+						aria-describedby={item.reviews.mobile_min + " star rating"}
+						className="-sm:flex hidden"
+					>
 						<span className="flex">
 							{Array.from(Array(item.reviews.mobile_min)).map((_, index) => (
 								<span key={index}>
